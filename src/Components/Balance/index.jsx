@@ -2,7 +2,7 @@ import 'components/Balance/style.css'
 
 const Balance = () => {
     return (
-        <div className='relative'>
+        <div className='max-w-7xl m-auto relative'>
             <svg className='absolute linear-gradient' xmlns="http://www.w3.org/2000/svg" width="553" height="368" viewBox="0 0 553 368" fill="none">
             <path d="M0.50819 119.167C-3.63846 87.4045 18.749 58.2939 50.512 54.1472L461.382 0.508173C493.145 -3.63848 522.256 18.749 526.402 50.512L552.272 248.675C556.419 280.438 534.032 309.548 502.269 313.695L91.3984 367.334C59.6354 371.48 30.5249 349.093 26.3783 317.33L0.50819 119.167Z" fill="url(#paint0_linear_748_31)"/>
             <defs>
@@ -14,11 +14,12 @@ const Balance = () => {
             </svg>
             <div className='container-blur mt-40 ml-28 pt-14 pl-14 pb-40 pr-14'>
                 <p className='text-2xl font-normal text-white'>
-                    Мой баланс
+                    Мои расходы
+                    {/* Мой баланс  */}
                 </p>
                 <p className='text-6xl font-bold text-white pt-4'>
-                    50 000 руб.
-                    {/* Здесь будет выводиться баланс*/}
+                    - 50 000 руб.
+                    {/* Здесь будет выводиться баланс, сначала сделаем сумму расходов с минусом*/}
                 </p>
             </div>
         </div>

@@ -1,0 +1,15 @@
+.bg-expenses {
+    background-color: #EBE9F8;
+}
+
+.stroke-field {
+    border-color: #9C90F7;
+}
+
+.stroke-outline {
+    outline-color: #624EF2;
+}
+
+.rounded-t-60 {
+    border-radius: 60px 60px 0px 0px;
+}

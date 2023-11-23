@@ -2,7 +2,7 @@ import "components/Header/style.css";
 
 const Header = () => {
   return (
-    <div className="">
+    <div className="max-w-7xl m-auto">
       <div className="py-8 flex justify-between items-center">
         <h1 className="text-5xl text-black font-extrabold">Привет, Аня</h1>
         <div className="w-14 h-14 bg-stone-300 rounded-full"></div>
