@@ -2,6 +2,6 @@
     background-color: #D15EF7;
 }
 
-.bg-button-hover {
+.bg-button-hover:hover {
     background-color: #AA33D1;
 }
