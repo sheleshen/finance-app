@@ -18,25 +18,28 @@ const unsortedCategories = [
 
 const categories = unsortedCategories.sort();
 
-const ExpensesForm = () => {
+const ExpensesForm = ({addExpense}) => {
   const [spending, setSpending] = useState("");
   const [category, setCategory] = useState(categories[0]);
 
-  const handleClick = () => {
-    const newExpens = {
+  const handleClick = (event) => {
+    event.preventDefault()
+
+    const expense = {
       spending,
       category,
     };
 
-    // Надо записать новые данные const newExpens в область расходов, пока не знаю как, но их видно в консоли
+    // Надо записать новые данные const newExpens в область расходов
+    addExpense(expense)
 
-    console.log(newExpens);
+    console.log(expense);
     setSpending("");
     setCategory(categories[0]);
   };
 
   return (
-    <div className="flex gap-4 justify-center py-16">
+    <form className="flex gap-4 justify-center py-16">
       <input
         onChange={(event) => setSpending(event.target.value)}
         value={spending}
@@ -57,7 +60,7 @@ const ExpensesForm = () => {
         ))}
       </select>
       {<Button title="Добавить" handleClick={handleClick} type="submit" />}
-    </div>
+    </form>
   );
 };
 

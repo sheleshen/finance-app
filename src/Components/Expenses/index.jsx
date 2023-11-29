@@ -1,14 +1,24 @@
 import "components/Expenses/style.css";
 import ExpensesForm from "components/ExpensesForm";
+import { useState } from "react";
 
-const Expenses = (/*props*/) => {
-  // const { newExpense } = props;
+const Expenses = (props) => {
+  const { expense } = props;
+
+  const [expenses, setExpenses] = useState([]);
+  
+  const addExpense = (expense) => {
+    const newExpense = [...expenses, expense]
+    setExpenses(newExpense)
+
+    // setExpenses([...expenses, expense])
+  }
 
   const currentDate = new Date().toLocaleDateString();
 
   return (
     <div className="bg-expenses mt-16 rounded-t-60">
-      <ExpensesForm />
+      <ExpensesForm addExpense={addExpense}/>
       <div className="max-w-7xl m-auto pb-16">
         <div className="flex justify-between">
           <div className="flex gap-5 items-center">
@@ -16,10 +26,12 @@ const Expenses = (/*props*/) => {
               {currentDate}
             </p>
             <p className="text-3xl font-bold">
-              {/*newExpense.category*/}Категория
+              {expense.category}
             </p>
           </div>
-          <p className="text-3xl">- {/*newExpense.spending*/}2 999 ₽</p>
+          <p className="text-3xl">
+            - {expense.spending} 
+            </p>
         </div>
       </div>
     </div>
