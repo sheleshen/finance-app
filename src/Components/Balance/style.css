@@ -1,12 +1,12 @@
 .container-blur {
-    border-radius: 58px;
-    background: rgba(124, 121, 141, 0.20);
-    backdrop-filter: blur(7.5px);
-    width: 577px;
+  border-radius: 58px;
+  background: rgba(124, 121, 141, 0.2);
+  backdrop-filter: blur(7.5px);
+  width: 577px;
 }
 
 .linear-gradient {
-    top: -55px;
-    left: 116px;
-    z-index: -1;
+  top: -55px;
+  left: 116px;
+  z-index: -1;
 }
