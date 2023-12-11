@@ -2,10 +2,6 @@ import "components/ExpensesForm/style.css";
 import Button from "components/Button";
 import { useState } from "react";
 
-
-
-
-
 const ExpensesForm = ({addExpense, unsortedCategories}) => {
   const [spending, setSpending] = useState("");
   const [category, setCategory] = useState(unsortedCategories[0]);

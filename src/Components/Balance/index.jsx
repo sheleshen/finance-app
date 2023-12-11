@@ -1,6 +1,16 @@
 import "components/Balance/style.css";
 
 const Balance = () => {
+
+  /* Пройтись по новому массиву forEach или map с ценами expense.spending и сложить их parseInt */
+
+  let sum = 0
+
+  // expenses.forEach() {
+  //   sum += parseInt(expense.spending);
+  //   return sum
+  // };
+
   return (
     <div className="max-w-7xl m-auto relative">
       <svg
@@ -35,8 +45,9 @@ const Balance = () => {
           {/* Мой баланс  */}
         </p>
         <p className="text-6xl font-bold text-white pt-4">
-          - 50 000 руб.
-          {/* Здесь будет выводиться баланс, сначала сделаем сумму расходов с минусом*/}
+          {/* - 50 000 руб. */}
+          {sum}
+          {/* Здесь будет выводиться баланс, сначала сделаем сумму расходов*/}
         </p>
       </div>
     </div>
