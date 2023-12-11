@@ -2,25 +2,15 @@ import "components/ExpensesForm/style.css";
 import Button from "components/Button";
 import { useState } from "react";
 
-const unsortedCategories = [
-  "Путешествия",
-  "Развлечения",
-  "Образование",
-  "Еда",
-  "Одежда",
-  "Ипотека",
-  "ЖКХ",
-  "Здоровье",
-  "Связь",
-  "Транспорт",
-  "Косметика",
-];
 
-const categories = unsortedCategories.sort();
 
-const ExpensesForm = ({addExpense}) => {
+
+
+const ExpensesForm = ({addExpense, unsortedCategories}) => {
   const [spending, setSpending] = useState("");
-  const [category, setCategory] = useState(categories[0]);
+  const [category, setCategory] = useState(unsortedCategories[0]);
+
+  const categories = unsortedCategories.sort();
 
   const handleClick = (event) => {
     event.preventDefault()
@@ -30,7 +20,7 @@ const ExpensesForm = ({addExpense}) => {
       category,
     };
 
-    // Надо записать новые данные const newExpens в область расходов
+    // Надо записать новые данные const expense в область расходов
     addExpense(expense)
 
     console.log(expense);
@@ -59,7 +49,7 @@ const ExpensesForm = ({addExpense}) => {
           <option key={category}>{category}</option>
         ))}
       </select>
-      {<Button title="Добавить" handleClick={handleClick} type="submit" />}
+      {<Button title="Добавить" handleClick={handleClick} type="button" />}
     </form>
   );
 };
