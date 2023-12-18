@@ -4,6 +4,14 @@ import { useState } from "react";
 
 const Expenses = () => {
 
+/* Для  localStorage*/
+
+//   const [items, setItems] = useState([]);
+
+// useEffect(() => {
+//   localStorage.setItem('items', JSON.stringify(items));
+// }, [items]);
+
   const unsortedCategories = [
     "Путешествия",
     "Развлечения",
