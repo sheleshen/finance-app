@@ -45,7 +45,7 @@ const Expenses = () => {
               </p>
             </div>
             <p className="text-3xl">
-              - {expense.spending} 
+              - {expense.spending} руб.
               </p>
           </div>
 

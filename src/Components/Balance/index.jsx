@@ -2,9 +2,11 @@ import "components/Balance/style.css";
 
 const Balance = () => {
 
-  /* Пройтись по новому массиву forEach или map с ценами expense.spending и сложить их parseInt */
+  /* Пройтись по новому массиву forEach или map с ценами expense.spending и сложить их parseInt ? */
 
   let sum = 0
+
+  /* передать в forEach массив, импортировать */
 
   // expenses.forEach() {
   //   sum += parseInt(expense.spending);
