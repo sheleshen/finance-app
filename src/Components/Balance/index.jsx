@@ -1,17 +1,9 @@
 import "components/Balance/style.css";
 
 const Balance = () => {
-
-  /* Пройтись по новому массиву forEach или map с ценами expense.spending и сложить их parseInt ? */
-
-  let sum = 0
-
-  /* передать в forEach массив, импортировать */
-
-  // expenses.forEach() {
-  //   sum += parseInt(expense.spending);
-  //   return sum
-  // };
+  
+  // const getSum = JSON.parse(localStorage.getItem('expenses')) || []
+  // let sum = getSum.reduce((curretSum, currentItem) => curretSum + parseInt(currentItem.spending), 0)
 
   return (
     <div className="max-w-7xl m-auto relative">
@@ -36,8 +28,8 @@ const Balance = () => {
             y2="330.5"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#624EF2" />
-            <stop offset="1" stop-color="#D15EF7" />
+            <stop stopColor="#624EF2" />
+            <stop offset="1" stopColor="#D15EF7" />
           </linearGradient>
         </defs>
       </svg>
@@ -47,8 +39,8 @@ const Balance = () => {
           {/* Мой баланс  */}
         </p>
         <p className="text-6xl font-bold text-white pt-4">
-          {/* - 50 000 руб. */}
-          {sum}
+          - 0 руб.
+          {/* {sum} руб.*/}
           {/* Здесь будет выводиться баланс, сначала сделаем сумму расходов*/}
         </p>
       </div>
