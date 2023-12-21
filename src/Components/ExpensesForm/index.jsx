@@ -2,14 +2,14 @@ import "components/ExpensesForm/style.css";
 import Button from "components/Button";
 import { useState } from "react";
 
-const ExpensesForm = ({addExpense, unsortedCategories}) => {
+const ExpensesForm = ({ addExpense, unsortedCategories }) => {
   const [spending, setSpending] = useState("");
   const [category, setCategory] = useState(unsortedCategories[0]);
 
   const categories = unsortedCategories.sort();
 
   const handleClick = (event) => {
-    event.preventDefault()
+    event.preventDefault();
 
     const expense = {
       spending,
@@ -17,7 +17,7 @@ const ExpensesForm = ({addExpense, unsortedCategories}) => {
     };
 
     // Надо записать новые данные const expense в область расходов
-    addExpense(expense)
+    addExpense(expense);
 
     console.log(expense);
     setSpending("");

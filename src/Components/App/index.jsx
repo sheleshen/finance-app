@@ -5,8 +5,7 @@ import Expenses from "components/Expenses";
 import { useState } from "react";
 
 function App() {
-
-  const [expenses] = useState([])
+  const [expenses] = useState([]);
 
   return (
     <div>

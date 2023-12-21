@@ -1,7 +1,6 @@
 import "components/Balance/style.css";
 
 const Balance = () => {
-  
   // const getSum = JSON.parse(localStorage.getItem('expenses')) || []
   // let sum = getSum.reduce((curretSum, currentItem) => curretSum + parseInt(currentItem.spending), 0)
 
